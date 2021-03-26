@@ -5,9 +5,17 @@ pipeline {
     }
     stages {
         stage('Build') {
+            inut {
+                message 'do you hungry?'
+                ok 'Yes, I am'
+                submitrer 'lex,john'
+                parameters {
+                    string(name: 'PERSON', defaultValue: 'Jenkins',
+                           description: 'Description about dessision') 
+                }
+            }
             steps {
-                sh 'mvn --version'
-                echo 'Building..'
+                echo 'Hello, ${PERSON}'
             }
         }
         stage('Test') {
