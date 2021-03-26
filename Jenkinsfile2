@@ -1,9 +1,12 @@
 pipeline {
     agent any
-
+    tools {
+        maven 'localmvn'
+    }
     stages {
         stage('Build') {
             steps {
+                sh 'mvn --version'
                 echo 'Building..'
             }
         }
