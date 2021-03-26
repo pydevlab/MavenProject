@@ -8,10 +8,11 @@ pipeline {
             inut {
                 message 'do you hungry?'
                 ok 'Yes, I am'
-                submitrer 'lex,john'
+                submiter 'lex,john'
                 parameters {
                     string(name: 'PERSON', defaultValue: 'Jenkins',
                            description: 'Description about dessision') 
+                           }
                 }
             }
             steps {
